@@ -1,0 +1,90 @@
+<!--PROPY GRAMMAR-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> 
+       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=HJOCRHLb"></script>
+    <body>
+        <div class="information">
+            <h1>Welcome</h1>
+            <br/>
+            <p>This is version 1.0 of my "Vector G" project, vector Has just a few functions and with the future I want to add more functions to it, for that reason I would appreciate if you could give me suggestions, you would also report bugs regarding the vector functions, could you also suggest questions and answers that vector may have. I would appreciate if you would give a positive vote for me to continue improving Vector :3.</p>
+            <br />
+            <button onclick="closeInfo()">Meet Vector</button>
+        </div>
+        <div class="chat-box">
+            <input id="input" type="text" class="input" placeholder="Chat with vector!" />
+            <button id="send-btn"><i class="far fa-paper-plane fa-lg"></i></button>
+        </div>
+        <div class="bot-container">
+            <div class="head">
+                <div class="antenna">
+                    <div class="ground"></div>
+                    <div class="base"></div>
+                    <div class="dipole"></div>
+                    <div class="sphere"></div>
+                </div>
+                <div class="eyes eye1">
+                    <div class="pupil"></div>
+                </div>
+                <div class="eyes eye2">
+                    <div class="pupil"></div>
+                </div>
+                <div class="mouth"></div>
+                <div class="ears ear1"></div>
+                <div class="ears ear2"></div>
+            </div>
+            <div class="body">
+                <div class="neck"></div>
+                <div class="base"></div>
+                <button onclick="turnOn()" class="btn"><i id="btn" style="color: #229954;" class="fas fa-power-off fa-lg"></i></button>
+                <div id="screen" class="screen">
+                    <div id="clock" class="clock"></div>
+                    <div id="apps" class="apps">
+                        <i class="fas fa-calculator fa-lg icon calculator" id="calc-btn"></i>
+                        <i class="far fa-comments fa-lg icon chat" id="chat-btn"></i>
+                        <a href="https://www.sololearn.com/Profile/12916923/?ref=app"><i class="fas fa-user fa-lg icon user"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="arms arm1">
+                <div class="shoulder">
+                    <div class="arm">
+                        <div class="forearm">
+                            <div class="doll"></div>
+                            <div class="hand">
+                                <div class="detail1"></div>
+                                <div class="detail2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arms arm2">
+                <div class="shoulder">
+                    <div class="arm">
+                        <div class="forearm">
+                            <div class="doll"></div>
+                            <div class="hand">
+                                <div class="detail1"></div>
+                                <div class="detail2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feet">
+                <div class="part1"></div>
+                <div class="part2"></div>
+                <div class="shadow"></div>
+            </div>
+        </div>
+        <script src="./script/code.js"></script>
+    </body>
+</html>

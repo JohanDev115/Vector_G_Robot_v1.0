@@ -1,0 +1,560 @@
+/* Created by JOHANDEV */
+
+/* JOHAN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.information {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    text-align: center;
+    z-index: 4;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.information button {
+    color: white;
+    background-color: cyan;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+}
+
+.chat-box {
+    margin-top: 2%;
+    width: 90%;
+    position: fixed;
+    left: 50%;
+    top: -15%;
+    transform: translateX(-50%);
+    height: 30px;
+    z-index: 2;
+}
+
+.chat-box .input {
+    width: 85%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid cyan;
+}
+
+.chat-box #send-btn {
+    width: 15%;
+    height: 100%;
+    float: right;
+    background-color: cyan;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    outline: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bot-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 95vh;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.bot-container .head {
+    position: absolute;
+    width: 70%;
+    height: 35%;
+    left: 50%;
+    top: 20%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    background-color: #E5E8E8;
+    box-shadow: inset 1.5em 1.5em 3em #CCD1D1;
+    z-index: 2;
+}
+
+.bot-container .head .antenna > .ground {
+    width: 40%;
+    height: 15%;
+    border-radius: 50%;
+    background-color: #000000;
+    position: absolute;
+    border: 5px solid black;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.bot-container .head .antenna > .base {
+    width: 35%;
+    height: 15%;
+    border-radius: 50%;
+    background-color: #F2F4F4;
+    box-shadow: inset .5em .5em 1em #B2BABB;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bot-container .head .antenna > .dipole {
+    width: 5%;
+    height: 25%;
+    left: 50%;
+    top: -5%;
+    position: absolute;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    border-radius: 20%;
+}
+
+.bot-container .head .antenna > .sphere {
+    width: 15%;
+    height: 19%;
+    left: 50%;
+    top: -25%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #F2F3F4;
+    box-shadow: inset .3em .3em .5em #A6ACAF;
+    transform: translate(-50%, -50%);
+}
+
+.bot-container .head .eyes {
+    width: 30%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: #515A5A;
+    box-shadow: inset .5em .5em 1em #424949;
+    position: absolute;
+    border: 2vmin solid #424949;
+    top: 65%;
+    transform: translateY(-50%);
+}
+
+.bot-container .head .eye1 {
+    left: 15%;
+}
+
+.bot-container .head .eye2 {
+    left: 55%;
+}
+
+.bot-container .head .eyes > .pupil {
+    width: 30%;
+    height: 1%;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bot-container .head .ears {
+    width: 15%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    border: 1vmin solid #424949;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bot-container .head .ear1 {
+    left: -5%;
+    border-right: 1vmin solid #B2BABB;
+    border-bottom: 1vmin solid #B2BABB;
+    box-shadow: inset .5em .5em 1em #515A5A;
+}
+
+.bot-container .head .ear2 {
+    left: 90%;
+    border-left: 1vmin solid #B2BABB;
+    border-bottom: 1vmin solid #B2BABB;
+    box-shadow: inset -0.5em .5em 1em #515A5A;
+}
+
+.bot-container .body {
+    width: 35%;
+    height: 30%;
+    top: 66%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #F4F6F6;
+    box-shadow: inset 1em 1em 3em #B2BABB;
+    border-radius: 30% 30% 40% 40%;
+}
+
+.bot-container .body .neck {
+    width: 40%;
+    height: 30%;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: gray;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.bot-container .body .base {
+    width: 70%;
+    height: 25%;
+    top: 15%;
+    left: 50%;
+    border: 3px solid #5F6A6A;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.bot-container .body .btn {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    outline: none;
+    padding: 5px;
+    cursor: pointer;
+    color: #229954;
+}
+
+.bot-container .body .screen {
+    width: 65%;
+    height: 35%;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border: 1vmin solid black;
+    border-radius: 20%;
+    background: #515A5A;
+    overflow: hidden;
+}
+
+.bot-container .body .clock {
+    width: 80%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    font-family: arial, sans-serif;
+}
+
+.bot-container .body .screen .apps {
+    width: 100%;
+    height: 70%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    visibility: hidden;
+}
+
+.bot-container .body .screen .apps .icon {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: white;
+    cursor: pointer;
+}
+
+.bot-container .body .screen .apps .calculator {
+    left: 15%;
+}
+
+.bot-container .body .screen .apps .chat {
+    left: 50%;
+}
+
+.bot-container .body .screen .apps .user {
+    left: 85%;
+}
+
+.bot-container .arms {
+    position: absolute;
+    width: 20%;
+    height: 35%;
+    top: 60%;
+    z-index: 2;
+}
+
+.bot-container .arm1 {
+    left: 13%;
+    transform-origin: right top;
+}
+
+.bot-container .arm2 {
+    left: 67%;
+    transform-origin: left top;
+}
+
+
+.bot-container .arms > .shoulder {
+    width: 45%;
+    height: 16%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border-radius: 50%;
+    top: 0%;
+}
+
+.bot-container .arm1 > .shoulder {
+    left: 100%;
+}
+
+.bot-container .arm2 > .shoulder {
+    left: 0%;
+}
+
+.bot-container .arms > .shoulder > .arm {
+    width: 40%;
+    height: 150%;
+    position: absolute;
+    background-color: black;
+    border-radius: 25%;
+    top: 50%;
+    left: 30%;
+    transform-origin: center top;
+}
+
+.bot-container .arms > .shoulder > .arm > .forearm {
+    width: 350%;
+    height: 150%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #E5E8E8;
+    box-shadow: inset 1em .5em 1.5em #99A3A4;
+    top: 113%;
+    left: 50%;
+    border-radius: 100% 100% 90% 90%;
+}
+
+.bot-container .arms > .shoulder > .arm > .forearm > .doll {
+    width: 70%;
+    height: 25%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    top: 85%;
+    left: 50%;
+    border: 1vmin solid #000011;
+    border-radius: 50%;
+}
+
+.bot-container .arms > .shoulder > .arm > .forearm > .hand {
+    width: 90%;
+    height: 60%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transform: inherit;
+    background-color: #B2BABB;
+    box-shadow: inset .5em .5em 1em #E5E8E8;
+    border-radius: 50%;
+    left: 50%;
+    top: 110%;
+}
+
+.bot-container .arms > .shoulder > .arm > .forearm > .hand > .detail1 {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border-radius: 50%;
+    top: 55%;
+    left: 60%;
+}
+
+.bot-container .arm1 > .shoulder > .arm > .forearm > .hand > .detail1 {
+    left: 60%;
+}
+
+.bot-container .arm2 > .shoulder > .arm > .forearm > .hand > .detail1 {
+    left: 40%;
+}
+
+.bot-container .arms > .shoulder > .arm > .forearm > .hand > .detail2 {
+    width: 10%;
+    height: 30%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    top: 85%;
+    border-radius: 40%;
+}
+
+
+.bot-container .arm1 > .shoulder > .arm > .forearm > .hand > .detail2 { 
+    left: 60%;
+}
+
+.bot-container .arm2 > .shoulder > .arm > .forearm > .hand > .detail2 { 
+    left: 40%;
+}
+
+.bot-container .feet > .part1 {
+    width: 20%;
+    height: 10%;
+    top: 79%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: black;
+    border-radius: 40%;
+}
+
+.bot-container .feet > .part2 {
+    width: 14%;
+    height: 10%;
+    top: 81%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: black;
+    border-radius: 40%;
+}
+
+.bot-container .feet > .shadow {
+    width: 22%;
+    height: 4%;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #CCD1D1;
+    border-radius: 50%;
+}
+
+@keyframes animintro {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes animchat1 {
+    from {top: -15%;}
+    to {top: 0%;}
+}
+
+@keyframes animchat2 {
+    from {top: 0%;}
+    to {top: -15%;}
+}
+
+@keyframes animScreen1 {
+    from {background: #515A5A;}
+    to {background: linear-gradient(to bottom right, red, orange, yellow);}
+}
+
+@keyframes animScreen2 {
+    from {background-image: linear-gradient(to bottom right, red, orange, yellow);}
+    to {background-color: #515A5A;}
+}
+
+@keyframes animApps1 {
+    from {visibility: hidden; top: -20%;}
+    to {visibility: visible; top: 60%;}
+}
+
+@keyframes animApps2 {
+    from {visibility: visible; top: 60%;}
+    to {visibility: hidden; top: -20%;}
+}
+
+@keyframes animClock1 {
+    from {font-size: 14px;top: 50%;color: red;}
+    to {font-size: 8px;top: 10%;left: 30%;color: white;}
+}
+
+@keyframes animClock2 {
+    from {font-size: 8px;top: 10%;left: 40%;color: white;}
+    to {font-size: 14px;top: 50%;color: red;}
+}
+
+@keyframes animArm1-1 {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(40deg);}
+}
+
+@keyframes animArm2-1 {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-40deg);}
+}
+
+@keyframes animArm1-2 {
+    from {transform: rotate(40deg);}
+    to {transform: rotate(0deg);}
+}
+
+@keyframes animArm2-2 {
+    from {transform: rotate(-40deg);}
+    to {transform: rotate(0deg);}
+}
+
+@media (min-width: 320px) {
+    .bot-container {
+        height: 90vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .bot-container {
+        width: 55%;
+        height: 95vh;
+        top: 55%;
+    }
+
+    .chat-box {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bot-container {
+        width: 35%;
+        height: 95vh;
+        top: 52%;
+    }
+
+    .chat-box {
+        width: 60%;
+        margin-top: 10px;
+    }
+
+    .information {
+        width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
